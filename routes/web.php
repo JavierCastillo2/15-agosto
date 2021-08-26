@@ -13,6 +13,8 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::redirect('/','users');
 Route::get('users',[UserController::class, 'index'])->name('users.index');
 Route::get('users/create',[UserController::class, 'create'])->name('users.create');
 Route::get('users/{id}',[UserController::class, 'show'])->name('users.show');
